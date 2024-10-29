@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title>Hamad’s Portfolio</title>
+    <link rel="icon" href="favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="grid-container">
+      <!--Navbar/Header Start -->
+      <header class="header">
+        <div class="logo">
+          <span>HAMAD</span>
+          <span>ULLAH</span>
+        </div>
+        <ul class="header-links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="#">HOBBIES</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <svg
+          id="hamburger"
+          class="Header__toggle-svg"
+          viewbox="0 0 60 40"
+          onclick="toggleMenu()"
+        >
+          <g
+            stroke="#565449"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path id="top-line" d="M10,10 L50,10 Z"></path>
+            <path id="middle-line" d="M10,20 L50,20 Z"></path>
+            <path id="bottom-line" d="M10,30 L50,30 Z"></path>
+          </g>
+        </svg>
+      </header>
+      <!--Navbar/Header End -->
+
+      <!--Profile Photo Container Start -->
+      <div class="portrait-icon">
+        <img
+          class="photocontainer"
+          alt="Profile Photo"
+          src="profilephoto.png"
+        />
+      </div>
+      <!--Profile Photo Container End -->
+
+      <!--Slogan Container Start -->
+      <div class="slogan">
+        <b>Aspiring IT Student</b> <i>Crafting Tomorrow’s</i>
+        <b>Tech Solutions Today</b>
+      </div>
+      <!--Slogan Container End -->
+
+      <!--Side Container Start -->
+      <div class="side-container">
+        <div class="title">Favourites</div>
+        <iframe
+          src="https://open.spotify.com/embed/track/1TQXIltqoZ5XXyfCbAeSQQ?utm_source=generator"
+          frameborder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe>
+
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube-nocookie.com/embed/ANCAyz_U_oo?si=1VDxuYfhjMyvZo9_&amp;controls=0"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <!--Side Container End -->
+
+      <!--About Container Start -->
+      <div class="about">
+        <p>
+          I am an Information Technology student at the University of Eastern
+          Finland, where I'm developing my skills in programming, IT support,
+          and software development. With a solid foundation in Python, Java, and
+          SQL, I'm eager to contribute to projects that push my limits and help
+          me grow as a professional in the tech industry.
+        </p>
+      </div>
+      <!--About Container End -->
+
+      <!--Contact me Container Start -->
+      <a class="contact" href="mailto:hamadull@uef.fi">
+        <div class="question">
+          <p>Have some</p>
+          <p>questions?</p>
+        </div>
+        <img class="arrow-icon" alt="Arrow Icon" src="arrow_icon.svg" />
+        <div class="contact-me">Contact me</div>
+      </a>
+      <!--Contact me Container End -->
+
+      <!--Socials Container End -->
+      <div class="socials">
+        <a href="https://github.com/hammadaiy" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/hammadaiy" target="_blank">LinkedIn</a>
+        <a href="https://instagram.com/hammadaiy" target="_blank">Instagram</a>
+        <a href="https://threads.net/hammadaiy" target="_blank">Threads</a>
+      </div>
+      <!--Socials Container End -->
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

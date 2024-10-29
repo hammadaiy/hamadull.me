@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hamad’s Portfolio</title>
+    <link rel="icon" href="favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="grid1-container">
+      <!--Navbar/Header Start -->
+      <header class="header">
+        <div class="logo">
+          <span>HAMAD</span>
+          <span>ULLAH</span>
+        </div>
+        <ul class="header-links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="#">HOBBIES</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <svg
+          id="hamburger"
+          class="Header__toggle-svg"
+          viewbox="0 0 60 40"
+          onclick="toggleMenu()"
+        >
+          <g
+            stroke="#565449"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path id="top-line" d="M10,10 L50,10 Z"></path>
+            <path id="middle-line" d="M10,20 L50,20 Z"></path>
+            <path id="bottom-line" d="M10,30 L50,30 Z"></path>
+          </g>
+        </svg>
+      </header>
+      <!--Navbar/Header End -->
+      <div class="container mt-5">
+        <h1 class="text-center mb-4">Curriculum Vitae</h1>
+
+        <!-- Brief Introduction -->
+        <section class="mb-5">
+          <h2>About Me</h2>
+          <p>
+            Hello! I’m [Your Name], a passionate individual dedicated to
+            continuous learning and professional growth in [Your Field]. With a
+            background in [Your Educational Background/Field], I am driven to
+            contribute meaningfully in my career.
+          </p>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section class="mb-5">
+          <h2>Work Experience</h2>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <strong>Software Engineer Intern</strong> <br />
+              <a href="https://www.examplecompany.com" target="_blank"
+                >Example Company</a
+              >
+              <br />
+              June 2022 - August 2022 <br />
+              <ul>
+                <li>
+                  Developed and tested web applications using JavaScript and
+                  Python.
+                </li>
+                <li>
+                  Collaborated with cross-functional teams to improve product
+                  performance.
+                </li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <strong>Junior Data Analyst</strong> <br />
+              <a href="https://www.anothercompany.com" target="_blank"
+                >Another Company</a
+              >
+              <br />
+              September 2021 - May 2022 <br />
+              <ul>
+                <li>
+                  Analyzed datasets to provide insights that increased
+                  efficiency by 15%.
+                </li>
+                <li>Utilized SQL for querying and managing data.</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Education Section -->
+        <section class="mb-5">
+          <h2>Education</h2>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <strong>Bachelor of Science in Computer Science</strong> <br />
+              <a href="https://www.exampleuniversity.com" target="_blank"
+                >Example University</a
+              >
+              <br />
+              2019 - 2023
+            </li>
+            <li class="list-group-item">
+              <strong>Master of Science in Data Science</strong> <br />
+              <a href="https://www.examplegradschool.com" target="_blank"
+                >Example Graduate School</a
+              >
+              <br />
+              Expected Graduation: 2025
+            </li>
+          </ul>
+        </section>
+
+        <!-- Language Skills Section -->
+        <section class="mb-5">
+          <h2>Language Skills</h2>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Language</th>
+                <th>Writing</th>
+                <th>Speaking</th>
+                <th>Reading</th>
+                <th>Listening</th>
+                <th>Overall Level</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>English</td>
+                <td>C2</td>
+                <td>C2</td>
+                <td>C2</td>
+                <td>C2</td>
+                <td>Fluent</td>
+              </tr>
+              <tr>
+                <td>Spanish</td>
+                <td>B2</td>
+                <td>B1</td>
+                <td>B2</td>
+                <td>B1</td>
+                <td>Intermediate</td>
+              </tr>
+              <tr>
+                <td>German</td>
+                <td>A2</td>
+                <td>A2</td>
+                <td>A2</td>
+                <td>A1</td>
+                <td>Basic</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section class="mb-5">
+          <h2>Technical Skills</h2>
+          <ul class="list-group">
+            <li class="list-group-item">
+              Programming Languages: Python, JavaScript, SQL, Java
+            </li>
+            <li class="list-group-item">
+              Frameworks and Libraries: React, Node.js, Bootstrap
+            </li>
+            <li class="list-group-item">
+              Databases: MySQL, PostgreSQL, MongoDB
+            </li>
+            <li class="list-group-item">
+              Tools: Git, Docker, Jupyter, VS Code
+            </li>
+          </ul>
+        </section>
+
+        <!-- Additional Information (Optional) -->
+        <section class="mb-5">
+          <h2>Additional Information</h2>
+          <p>
+            If you have any questions, feel free to
+            <a href="contact.html">contact me</a>.
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
