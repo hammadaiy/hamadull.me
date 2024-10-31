@@ -30,9 +30,11 @@ body {
   align-items: center;
   background-color: #d8cfbc;
   border-radius: 16px;
+  height: 55px;
 }
 
 .logo {
+  font-family: "Playfair Display", serif;
   font-size: 24px;
   font-weight: bold;
   margin-left: 20px;
@@ -115,6 +117,7 @@ body {
   display: flex;
   gap: 15px;
   margin-right: 50px;
+  align-items: center;
 }
 
 .header-links a {
@@ -124,6 +127,7 @@ body {
   font-family: "Merriweather Sans", sans-serif;
   font-size: 15px;
   font-weight: bold;
+  margin: 0;
 }
 
 .header-links a:hover {
@@ -134,6 +138,7 @@ body {
 
 .header-links li {
   transition: transform 0.4s ease;
+  align-items: center;
 }
 
 .header-links li:hover {
@@ -440,9 +445,9 @@ body {
   overflow: hidden;
 }
 
-.container {
+.container-contact {
   display: grid;
-  grid-template-rows: 50px 800px;
+  grid-template-rows: 55px 800px;
   grid-column: 1;
   justify-content: center;
   align-items: center;
@@ -477,7 +482,7 @@ body {
   }
 }
 
-.container h1 {
+.container-contact h1 {
   font-weight: 800;
   font-size: 40px;
   font-family: "Playfair Display", serif;
@@ -565,8 +570,6 @@ body {
 
 .card-body h2 {
   color: #565449;
-  text-decoration: underline 1px;
-  text-underline-offset: 10px;
   font-size: 25px;
 }
 .social-icons {
@@ -602,14 +605,14 @@ body {
 @media (max-width: 820px) {
   .grid-contact-container {
     display: grid;
-    grid-template-rows: 55px 950px 70px;
+    grid-template-rows: 70px 950px 70px;
     gap: 13px;
-    padding: 15px;
-    margin: 0 auto;
+    padding: 10px;
+    margin: 0;
     overflow: hidden;
     width: 100%;
   }
-  .container {
+  .container-contact {
     display: grid;
     grid-template-rows: 50px 800px 80px;
     grid-column: 1;
@@ -623,7 +626,7 @@ body {
     color: #565449;
     width: 100%;
   }
-  .container h1 {
+  .container-contact h1 {
     font-weight: 800;
     font-size: 30px;
     font-family: "Playfair Display", serif;
@@ -678,23 +681,30 @@ body {
 /* CV Page */
 /* Container background and padding */
 .grid1-container {
+  background-color: #11120d;
+  display: grid;
+  grid-template-rows: 55px 1780px;
+  gap: 13px;
   padding: 15px;
   margin: 0 auto;
   overflow: hidden;
-  background-color: #11120d;
+  align-items: center;
 }
 
 .container {
   background-color: #d8cfbc;
-  padding: 30px;
+  padding: 15px;
   border-radius: 16px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  grid-row: 2;
+  overflow: hidden;
+  width: 100%;
+  word-wrap: break-word;
 }
 
 /* Title styling */
 h1 {
   color: #565449;
-  font-family: Arial, sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   text-transform: uppercase;
 }
 
@@ -705,21 +715,25 @@ h2 {
   margin-top: 20px;
   border-bottom: 2px solid #565449;
   padding-bottom: 5px;
+  font-family: "Merriweather Sans", sans-serif;
 }
 
 /* List items */
 .list-group-item {
-  background-color: #ffffff;
   border: 1px solid #565449;
   font-family: "Roboto", sans-serif;
-  font-size: 1.1em;
+  font-size: 1em;
+  background-color: #565449;
 }
-
+.list-group {
+  background-color: #565449;
+}
 /* Custom styling for table */
 .table {
   background-color: #565449;
   font-size: 0.9em;
   text-align: center;
+  overflow-x: auto;
 }
 
 /* Paragraphs in 'About Me' section */
@@ -727,4 +741,133 @@ h2 {
   font-size: 1em;
   color: #555;
   line-height: 1.6;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 8px 20px;
+  border: 2px solid #565449;
+  color: #565449;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 15px;
+  margin-left: 500px;
+  border-radius: 8px;
+}
+
+.download-btn:hover {
+  border-radius: 8px;
+  background-color: #565449;
+  color: #d8cfbc;
+}
+
+.mb-5 li {
+  background-color: #d8cfbc;
+  border: none;
+}
+.mb-5 ul {
+  border-radius: 0;
+}
+
+.table {
+  border-radius: 8px;
+}
+
+table.table th,
+table.table td {
+  background-color: inherit;
+  color: inherit;
+  border: none;
+}
+
+table.table tr:nth-child(odd) {
+  background-color: #d8cfbc;
+  color: #565449;
+}
+table.table tr:nth-child(even) {
+  background-color: #565449;
+  color: #d8cfbc;
+}
+
+@media (max-width: 820px) {
+  .grid1-container {
+    display: grid;
+    grid-template-rows: 50px 2020px;
+    gap: 0px;
+    padding: 10px;
+    margin: 0;
+    overflow: hidden;
+    width: 100%;
+    word-wrap: break-word;
+  }
+  .container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: #d8cfbc;
+    border-radius: 16px;
+    padding: 15px;
+    width: 100%;
+    color: #565449;
+    grid-row: 2;
+  }
+
+  /* Section title styling */
+  h2 {
+    color: #565449;
+    font-size: 1.1em;
+    margin-top: 20px;
+    border-bottom: 2px solid #565449;
+    padding-bottom: 5px;
+    font-family: "Merriweather Sans", sans-serif;
+  }
+
+  /* List items */
+  .list-group-item {
+    border: 1px solid #565449;
+    font-family: "Roboto", sans-serif;
+    font-size: 1em;
+    background-color: #565449;
+  }
+  .list-group {
+    background-color: #565449;
+  }
+  /* Custom styling for table */
+  .table {
+    background-color: #565449;
+    font-size: 0.9em;
+    text-align: center;
+    overflow-x: auto;
+  }
+
+  .about-me {
+    font-size: 1em;
+    color: #565449;
+    line-height: 1.6;
+  }
+
+  .download-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    border: 2px solid #565449;
+    color: #565449;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    font-family: "Merriweather Sans", sans-serif;
+    font-size: 15px;
+    margin-left: 299px;
+    border-radius: 8px;
+    position: relative;
+  }
+
+  .download-btn:hover {
+    border-radius: 8px;
+    background-color: #565449;
+    color: #d8cfbc;
+  }
 }
