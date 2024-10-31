@@ -3,53 +3,84 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hobbies</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Hamad’s Portfolio</title>
+    <link rel="icon" href="favicon.png" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="page-content hobbies">
-      <h1>My Hobbies</h1>
+    <div class="page-content-hobbies">
+      <!--Navbar/Header Start -->
+      <header class="header">
+        <div class="logo">
+          <span>HAMAD</span>
+          <span>ULLAH</span>
+        </div>
+        <ul class="header-links">
+          <li><a href="./">HOME</a></li>
+          <li><a href="./cv">CV</a></li>
+          <li><a href="./hobbies">HOBBIES</a></li>
+          <li><a href="./contact">CONTACT</a></li>
+        </ul>
+        <svg
+          id="hamburger"
+          class="Header__toggle-svg"
+          viewbox="0 0 60 40"
+          onclick="toggleMenu()"
+        >
+          <g
+            stroke="#565449"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path id="top-line" d="M10,10 L50,10 Z"></path>
+            <path id="middle-line" d="M10,20 L50,20 Z"></path>
+            <path id="bottom-line" d="M10,30 L50,30 Z"></path>
+          </g>
+        </svg>
+      </header>
+      <!--Navbar/Header End -->
 
       <!-- Hobbies List -->
-      <section class="hobbies-list">
-        <h2>Things I Enjoy</h2>
-        <ul>
-          <li>Reading science fiction novels</li>
-          <li>Playing football with friends</li>
-          <li>Experimenting with new recipes</li>
-          <li>Listening to podcasts about technology</li>
-          <li>Traveling and exploring new places</li>
-        </ul>
-      </section>
+      <div class="container-hobbies">
+        <section class="hobbies-list">
+          <h2>Things I Enjoy</h2>
+          <ul>
+            <li>Photography</li>
+            <li>Football</li>
+            <li>Cooking</li>
+            <li>Music</li>
+            <li>Hiking</li>
+          </ul>
+        </section>
 
-      <!-- YouTube Video Snippet -->
-      <section class="youtube-video">
-        <h2>Favorite TV Show Snippet</h2>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        >
-        </iframe>
-      </section>
+        <!-- YouTube Video Snippet -->
+        <section class="youtube-video">
+          <h2>Favorite TV Show Snippet</h2>
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/ANCAyz_U_oo?si=BeJyCZws7nv5DelW"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </section>
 
-      <!-- Spotify Embed Player -->
-      <section class="spotify-player">
-        <h2>Favorite Song</h2>
-        <iframe
-          src="https://open.spotify.com/embed/track/YOUR_TRACK_ID"
-          width="300"
-          height="380"
-          frameborder="0"
-          allowtransparency="true"
-          allow="encrypted-media"
-        >
-        </iframe>
-      </section>
+        <!-- Spotify Embed Player -->
+        <section class="spotify-player">
+          <h2>Favorite Song</h2>
+          <iframe
+            style="border-radius: 12px"
+            src="https://open.spotify.com/embed/track/1TQXIltqoZ5XXyfCbAeSQQ?utm_source=generator"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+        </section>
+      </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

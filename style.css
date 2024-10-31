@@ -871,3 +871,138 @@ table.table tr:nth-child(even) {
     color: #d8cfbc;
   }
 }
+
+/* Hobbies page */
+
+.page-content-hobbies {
+  display: grid;
+  grid-template-rows: 55px 940px;
+  gap: 13px;
+  padding: 15px;
+  margin: 0 auto;
+  overflow: hidden;
+  align-items: center;
+}
+
+.container-hobbies {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: #d8cfbc;
+  border-radius: 16px;
+  padding: 15px;
+  width: 100%;
+  color: #565449;
+  grid-row: 2;
+}
+
+.hobbies-list {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 1.2em;
+  border: none;
+  gap: 50px;
+}
+
+.hobbies-list h2 {
+  border-bottom: 2px solid #565449;
+  font-size: 1.1em;
+}
+
+.hobbies-list ul {
+  display: flex;
+  padding: 0;
+  justify-content: space-between;
+  padding: 30px;
+}
+.youtube-video iframe {
+  border-radius: 16px;
+  width: 560px;
+  height: 315px;
+}
+.youtube-video h2 {
+  border-bottom: 2px solid #565449;
+  font-size: 1.1em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.spotify-player iframe {
+  border-radius: 16px;
+  width: 560px;
+  height: 315px;
+}
+.spotify-player h2 {
+  border-bottom: 2px solid #565449;
+  font-size: 1.1em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 820px) {
+  .page-content-hobbies {
+    display: grid;
+    grid-template-rows: 70px 630px;
+    gap: 13px;
+    padding: 10px;
+    margin: 0;
+    overflow: hidden;
+    width: 100%;
+  }
+  .container-hobbies {
+    display: grid;
+    grid-row: 2;
+    justify-content: center;
+    align-items: center;
+    background-color: #d8cfbc;
+    border-radius: 16px;
+    padding-bottom: 35px;
+    padding-top: 35px;
+    width: 100%;
+    color: #565449;
+  }
+  .hobbies-list {
+    font-family: "Merriweather Sans", sans-serif;
+    font-size: 1.2em;
+    border: none;
+    gap: 50px;
+  }
+
+  .hobbies-list h2 {
+    border-bottom: 2px solid #565449;
+    font-size: 1em;
+    width: 80%;
+  }
+
+  .hobbies-list ul {
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    padding: 15px;
+    font-size: 15px;
+  }
+  .youtube-video iframe {
+    border-radius: 16px;
+    width: 260px;
+    height: 160px;
+  }
+  .youtube-video h2 {
+    border-bottom: 2px solid #565449;
+    font-size: 1.1em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+  }
+
+  .spotify-player iframe {
+    border-radius: 16px;
+    width: 260px;
+    height: 160px;
+  }
+  .spotify-player h2 {
+    border-bottom: 2px solid #565449;
+    font-size: 1.1em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+  }
+}
