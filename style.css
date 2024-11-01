@@ -624,7 +624,6 @@ body {
     padding-top: 35px;
     width: 100%;
     color: #565449;
-    width: 100%;
   }
   .container-contact h1 {
     font-weight: 800;
@@ -634,30 +633,31 @@ body {
     grid-row: 1;
     color: #565449;
     margin-top: 30px;
+    margin-left: 15px;
+    width: 380px;
   }
   .sub-container {
     display: grid;
-    justify-content: space-between;
+    justify-content: center;
     align-items: space-between;
   }
   .card-body {
-    width: 100%;
-    max-width: 500px;
+    width: 300px;
+    max-width: 700px;
     font-weight: bold;
     transition: transform 0.4s ease;
     font-family: "Merriweather Sans", sans-serif;
     font-size: 15px;
     border-radius: 16px;
   }
+
   .card-1 {
     background-color: none;
-    grid-row: 3;
     color: #d8cfbc;
-    flex: 1;
+    margin-left: 50px;
     border-radius: 16px;
     padding: 20px;
     width: 350px;
-
     justify-content: center;
     align-items: center;
   }
@@ -669,9 +669,10 @@ body {
     grid-column: 2;
     border-radius: 16px;
     padding: 20px;
-    width: 600px;
+    width: 380px;
     justify-content: center;
     align-items: center;
+    margin-left: 15px;
   }
   .arroww {
     display: none;
@@ -699,6 +700,7 @@ body {
   overflow: hidden;
   width: 100%;
   word-wrap: break-word;
+  color: #000;
 }
 
 /* Title styling */
@@ -720,10 +722,12 @@ h2 {
 
 /* List items */
 .list-group-item {
-  border: 1px solid #565449;
+  border: transparent;
   font-family: "Roboto", sans-serif;
   font-size: 1em;
   background-color: #565449;
+  color: #000;
+  text-decoration: none;
 }
 .list-group {
   background-color: #565449;
@@ -810,43 +814,53 @@ table.table tr:nth-child(even) {
     background-color: #d8cfbc;
     border-radius: 16px;
     padding: 15px;
-    width: 100%;
+    width: 50%;
     color: #565449;
     grid-row: 2;
+    gap: 10px;
+    color: #000;
   }
 
   /* Section title styling */
-  h2 {
+  .container h2 {
     color: #565449;
     font-size: 1.1em;
-    margin-top: 20px;
     border-bottom: 2px solid #565449;
     padding-bottom: 5px;
     font-family: "Merriweather Sans", sans-serif;
+    word-wrap: break-word;
   }
 
   /* List items */
   .list-group-item {
-    border: 1px solid #565449;
+    border: 0;
     font-family: "Roboto", sans-serif;
-    font-size: 1em;
+    font-size: 0.9em;
     background-color: #565449;
+    word-wrap: break-word;
+    text-decoration: none;
+    color: #000;
   }
   .list-group {
     background-color: #565449;
+    border: 0;
+    color: #000;
   }
   /* Custom styling for table */
   .table {
     background-color: #565449;
-    font-size: 0.9em;
+    font-size: 0.5em;
     text-align: center;
     overflow-x: auto;
   }
 
-  .about-me {
-    font-size: 1em;
+  .container p {
+    font-size: 0.9em;
     color: #565449;
     line-height: 1.6;
+    word-wrap: break-word;
+    justify-content: center;
+    align-items: center;
   }
 
   .download-btn {
@@ -860,9 +874,11 @@ table.table tr:nth-child(even) {
     transition: background-color 0.3s;
     font-family: "Merriweather Sans", sans-serif;
     font-size: 15px;
-    margin-left: 299px;
+    margin-left: 150px;
     border-radius: 8px;
-    position: relative;
+    width: 150px;
+    align-items: center;
+    justify-content: center;
   }
 
   .download-btn:hover {
