@@ -195,20 +195,43 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  overflow: hidden;
 }
 
-.side-container iframe {
-  width: 95%;
-  height: 200px;
-  border-radius: 16px;
-  margin: 5px auto;
-}
-
-.title {
-  font-size: 25px;
+/* Github */
+.github-repos h1 {
   font-family: "Playfair Display", serif;
   font-weight: 800;
-  color: #565449;
+  color: #000;
+  text-transform: capitalize;
+  font-size: 1.5em;
+}
+
+.github-repos ul {
+  list-style-type: none;
+  padding: 0;
+  color: #9198a1;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.9em;
+}
+
+.github-repos li {
+  background-color: #565449;
+  margin: 9px 0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+.github-repos li:hover {
+  transform: scale(1.05);
+  transition: transform 0.4s ease;
+}
+
+.github-repos a {
+  text-decoration: none;
+  color: #d8cfbc;
+  font-weight: bold;
 }
 
 /* About me */
