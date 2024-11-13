@@ -940,24 +940,6 @@ table.table tr:nth-child(even) {
   grid-row: 2;
 }
 
-.hobbies-list {
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 1.2em;
-  border: none;
-  gap: 50px;
-}
-
-.hobbies-list h2 {
-  border-bottom: 2px solid #565449;
-  font-size: 1.1em;
-}
-
-.hobbies-list ul {
-  display: flex;
-  padding: 0;
-  justify-content: space-between;
-  padding: 30px;
-}
 .youtube-video iframe {
   border-radius: 16px;
   width: 560px;
