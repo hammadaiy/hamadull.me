@@ -6,5 +6,6 @@ You can access it via https://hamadull.me/
 
 A screenshot of the UI 👇
 
-![Screenshot 2025-01-14 145512](https://github.com/user-attachments/assets/fdfddc31-83d1-4bca-a1bb-5c4f6877fcce)
+![Screenshot 2025-01-25 152114](https://github.com/user-attachments/assets/22554dd2-e00a-45f7-9d60-c1fc1a210318)
+
 
