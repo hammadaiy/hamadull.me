@@ -43,7 +43,6 @@ export const useAutoScroll = ({
     previousTimeRef.current = time;
     requestRef.current = requestAnimationFrame(animate);
   };
-
   useEffect(() => {
     requestRef.current = requestAnimationFrame(animate);
     return () => {
@@ -51,7 +50,7 @@ export const useAutoScroll = ({
         cancelAnimationFrame(requestRef.current);
       }
     };
-  }, [isPaused]);
+  }, [isPaused, animate]);
 
   return {
     scrollContainerRef,

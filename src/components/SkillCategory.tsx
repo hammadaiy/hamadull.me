@@ -12,11 +12,8 @@ export default function SkillCategory({ title, skills, icon }: SkillCategoryProp
         <h3 className="text-sm font-semibold text-[var(--primary)]">{title}</h3>
       </div>
       <div className="h-0.5 w-16 bg-[#565449] opacity-60 mb-2 ml-6 rounded-full"></div>
-        <div className="flex flex-wrap gap-1.5">
-        {skills.map((skill, index) => {
+        <div className="flex flex-wrap gap-1.5">        {skills.map((skill, index) => {
           const getSkillBackground = () => {
-            const hash = skill.split('').reduce((acc, char) => char.charCodeAt(0) + acc, 0);
-            const hue = hash % 30;
             return {
               backgroundColor: '#565449',
               borderLeft: `3px solid var(--primary)`,

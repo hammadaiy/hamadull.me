@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import { Repository } from '@/utils/github';
 import { FaGithub } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
@@ -17,11 +16,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       .map(word => word.charAt(0).toUpperCase() + word.slice(1))
       .join(' ');
   };
-
   const getCardStyle = () => {
-    const hash = project.name.split('').reduce((acc, char) => char.charCodeAt(0) + acc, 0);
     return { backgroundImage: `linear-gradient(135deg, rgba(86, 84, 73, 1) 0%, rgba(65, 63, 55, 0.95) 100%)` };
-  };  return (    <div 
+  };return (    <div 
       className="bg-[var(--card-bg)] rounded-md p-5 transition-all duration-300 hover:shadow-lg hover:translate-y-[-3px] hover:scale-[1.02] flex flex-col h-[280px] relative overflow-hidden cursor-pointer border-2 border-[#565449] group"
       style={getCardStyle()}
     ><div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-[rgba(216,207,188,0.05)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>      <h3 className="text-base font-semibold mb-1.5 text-[var(--primary)] break-words">

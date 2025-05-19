@@ -20,7 +20,6 @@ const ScrollToTop = dynamic(() => import('@/components/ScrollToTop'), { ssr: fal
 
 export default function Home() {
   const { repos, featuredRepos, isLoading } = useGithubRepos();
-  const [hovering, setHovering] = useState<string | null>(null);
   const [pageLoaded, setPageLoaded] = useState(false);
 
   // Only show content after the page has been hydrated
@@ -186,7 +185,7 @@ export default function Home() {
             <p className="text-sm text-[var(--primary)] opacity-80 mb-2">Have a question or project in mind?</p>
             
             <div className="bg-[#565449] bg-opacity-20 p-2 rounded-md border border-[#565449] mb-3 text-center">
-              <p className="text-xs text-[var(--primary)] opacity-90">Let's collaborate and build something amazing together!</p>
+              <p className="text-xs text-[var(--primary)] opacity-90">Let&apos;s collaborate and build something amazing together!</p>
             </div>
             
             <a 

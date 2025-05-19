@@ -1,6 +1,5 @@
 import React from 'react';
 import { Repository } from '@/utils/github';
-import { FaGithub } from 'react-icons/fa';
 
 interface RepoListItemProps {
   repo: Repository;
