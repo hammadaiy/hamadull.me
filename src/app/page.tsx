@@ -291,7 +291,7 @@ export default function Home() {
                     </div>
                   </div>
                   
-                  {/* Right scroll button (hidden on mobile) */}
+                  {/* Right scroll button*/}
                   <button 
                     className="hidden md:flex absolute right-0 z-10 h-12 w-8 items-center justify-center bg-[rgba(23,23,23,0.4)] text-[var(--primary)] rounded-l-md hover:bg-[rgba(23,23,23,0.6)] transition-all duration-300 opacity-70 hover:opacity-100 backdrop-blur-sm"
                     onClick={() => {
