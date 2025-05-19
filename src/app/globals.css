@@ -1,11 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #11120d;
+  --foreground: #d8cfbc;
+  --primary: #d8cfbc;
+  --secondary: #565449;
+  --accent: #d8cfbc;
+  --card-bg: #565449;
+  --card-hover: #3a3932;
 }
 
-@theme inline {
+/* CSS variables */
+:root {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -14,13 +20,401 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #11120d;
+    --foreground: #d8cfbc;
+    --card-bg: #1a1b14;
+    --card-hover: #222318;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans, Arial, Helvetica, sans-serif);
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 4px 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(216, 207, 188, 0.3);
+  border-radius: 16px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(216, 207, 188, 0.5);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) transparent;
+}
+
+/* Custom smaller scrollbar for project descriptions */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(216, 207, 188, 0.3);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(216, 207, 188, 0.4);
+}
+
+/* Grid and section styling */
+.portfolio-section {
+  border-radius: 8px;
+  border: 2px solid #565449;
+  padding: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio-section:hover {
+  transform: translateY(-3px) scale(1.005);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25), 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* All cards now use the same style */
+.portfolio-section-primary, .portfolio-section-secondary {
+  background: var(--secondary);
+  color: var(--primary);
+}
+
+/* Keep the classes for backward compatibility but make them identical */
+.portfolio-section-primary {
+  background: var(--secondary);
+  color: var(--primary);
+}
+
+.portfolio-section-secondary {
+  background: var(--secondary);
+  color: var(--primary);
+}
+
+.portfolio-section {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #565449;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* Enhanced shadow for more depth with rounded corners */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-section:hover {
+  transform: translateY(-3px) scale(1.005);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25), 0 3px 8px rgba(0, 0, 0, 0.15);
+  border-color: #565449;
+  border-width: 2px;
+}
+
+/* Add subtle glow effect on hover */
+.portfolio-section:hover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(216, 207, 188, 0.4), transparent 50%);
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+/* Borderless section styling */
+.borderless-section {
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: none;
+  background: transparent;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+  opacity: 0;
+}
+
+/* Initial page load animations */
+@keyframes slideInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleFadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Entry animations for portfolio sections */
+.animate-entry {
+  opacity: 0;
+}
+
+.animate-entry.animate-slideInDown {
+  animation: slideInDown 0.6s ease-out forwards;
+}
+
+.animate-entry.animate-slideInLeft {
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.animate-entry.animate-slideInRight {
+  animation: slideInRight 0.6s ease-out forwards;
+}
+
+.animate-entry.animate-slideInUp {
+  animation: slideInUp 0.6s ease-out forwards;
+}
+
+.animate-entry.animate-scaleFadeIn {
+  animation: scaleFadeIn 0.6s ease-out forwards;
+}
+
+/* Slide in animation */
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.4s ease-out forwards;
+  opacity: 0;
+}
+
+/* Subtle bounce animation */
+@keyframes subtleBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+.animate-bounce-subtle {
+  animation: subtleBounce 2s ease-in-out infinite;
+}
+
+/* Animation removed for simplicity */
+
+/* Shimmer effect for loading states */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, 
+    rgba(86, 84, 73, 0.1), 
+    rgba(216, 207, 188, 0.2), 
+    rgba(86, 84, 73, 0.1)
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Hover glow effect */
+@keyframes hoverGlow {
+  0%, 100% { box-shadow: 0 0 5px rgba(216, 207, 188, 0.1); }
+  50% { box-shadow: 0 0 15px rgba(216, 207, 188, 0.2); }
+}
+
+.hover-glow:hover {
+  animation: hoverGlow 2s ease-in-out infinite;
+}
+
+/* Subtle scale effect on hover */
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+/* Hide scrollbar but keep functionality */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  scroll-behavior: smooth;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
+
+@keyframes pulseArrow {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(3px); }
+}
+
+.pulse-arrow {
+  animation: pulseArrow 1.5s infinite;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slideRight {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(300%); }
+}
+
+.animate-slideRight {
+  animation: slideRight 2s ease-in-out infinite;
+}
+
+.auto-scroll-container {
+  scroll-behavior: smooth;
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+/* Button styles - Modernized */
+/* Primary button style */
+.btn-primary, .btn-primary-inverted {
+  background-color: var(--primary);
+  color: var(--secondary);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover, .btn-primary-inverted:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(216, 207, 188, 0.2);
+}
+
+.btn-primary:hover svg, .btn-primary-inverted:hover svg,
+.btn-secondary:hover svg, .btn-secondary-inverted:hover svg {
+  transform: scale(1.15);
+  transition: transform 0.3s ease;
+}
+
+.btn-primary::before, .btn-primary-inverted::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  transition: all 0.6s;
+  z-index: -1;
+}
+
+.btn-primary:hover::before, .btn-primary-inverted:hover::before {
+  left: 100%;
+}
+
+/* Secondary button style */
+.btn-secondary, .btn-secondary-inverted {
+  background-color: transparent;
+  color: var(--primary);
+  border: 1.5px solid var(--primary);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.btn-secondary:hover, .btn-secondary-inverted:hover {
+  background-color: rgba(216, 207, 188, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Support for older button classes - for compatibility */
+.btn-primary-inverted {
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
+.btn-secondary-inverted {
+  background-color: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+/* Responsive grid adjustments */
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  
+  .portfolio-section {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    margin-bottom: 16px;
+  }
+  
+  /* Improved mobile padding */
+  .portfolio-section {
+    padding: 16px;
+  }
+  
+  /* Better button handling on small screens */
+  .btn-primary, .btn-secondary, .btn-primary-inverted, .btn-secondary-inverted {
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Adjust text sizes for better mobile readability */
+  h1 {
+    font-size: 1.75rem !important;
+  }
+  
+  h2 {
+    font-size: 1.25rem !important;
+  }
 }
